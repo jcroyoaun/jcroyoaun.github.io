@@ -1,43 +1,40 @@
-# Astro Starter Kit: Minimal
+# JuanCarlos Royo Aun - Portfolio Site
 
-```sh
-npm create astro@latest -- --template minimal
+Personal portfolio site built with Astro.
+
+## Development
+
+1. **Install dependencies** (first time only):
+```bash
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+2. **Run dev server**:
+```bash
+npm run dev
+```
+Visit http://localhost:4321
 
-## 🚀 Project Structure
+3. **Make your edits** in `src/pages/`
+   - `src/pages/index.astro` - Home page
+   - `src/pages/projects.astro` - Projects page
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+4. **Build and deploy**:
+```bash
+./build.sh
+git add -A
+git commit -m "Update site"
+git push origin master
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+GitHub Pages will automatically serve the built files.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Tech Stack
+- Astro
+- Vanilla CSS
+- Hosted on GitHub Pages
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Custom Domain
+Site is available at:
+- https://jcroyoaun.github.io
+- https://jcroyoaun.com (via CNAME)
