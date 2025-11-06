@@ -4,6 +4,14 @@
 echo "Building Astro site..."
 npm run build
 
-echo "Build complete! Files are in the current directory."
-echo "To push changes: git add -A && git commit -m 'Update site' && git push origin master"
+echo "Copying built files to root..."
+cp -r dist/* .
+rm -rf dist
 
+echo ""
+echo "✅ Build complete!"
+echo ""
+echo "To push changes:"
+echo "  git add -A"
+echo "  git commit -m 'Update site'"
+echo "  git push origin master"
