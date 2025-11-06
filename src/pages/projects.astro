@@ -1,0 +1,321 @@
+---
+const name = "JuanCarlos Royo Aun";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<meta name="description" content="Projects and courses by Juan Carlos Martinez" />
+	<title>Projects - {name}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<nav class="breadcrumb">
+			<a href="/">← Back to Home</a>
+		</nav>
+
+		<header>
+			<h1>Projects</h1>
+			<p class="subtitle">Things I've built and taught</p>
+		</header>
+
+		<section class="section-group">
+			<h2 class="section-title">Tools</h2>
+			<p class="section-description">Some online tools/apps I've built.</p>
+			
+			<div class="projects">
+				<div class="project-card">
+					<h3 class="project-title">dnszones.dev</h3>
+					<p class="project-description">
+						Online tool to create tree-like visualization of DNS zone hierarchies.
+					</p>
+					<a href="https://dnszones.dev" target="_blank" rel="noopener noreferrer" class="project-link">
+						Visit →
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-group">
+			<h2 class="section-title">Courses</h2>
+			<p class="section-description">I have collaborated as a KodeKloud trainer, so far I've published these two courses:</p>
+			
+			<div class="projects">
+				<div class="project-card">
+					<h3 class="project-title">Demystifying DNS</h3>
+					<p class="project-description">
+						Beginner introduction to DNS with labs.
+					</p>
+					<a href="https://learn.kodekloud.com/courses/demystifying-dns" target="_blank" rel="noopener noreferrer" class="project-link">
+						View Course →
+					</a>
+				</div>
+
+				<div class="project-card">
+					<h3 class="project-title">Advanced Bash Scripting</h3>
+					<p class="project-description">
+						Advanced deep dive in scripting with Bash.
+					</p>
+					<a href="https://learn.kodekloud.com/courses/advanced-bash-scripting" target="_blank" rel="noopener noreferrer" class="project-link">
+						View Course →
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p>© 2025 {name}. Building and teaching in LATAM.</p>
+		</footer>
+	</div>
+</body>
+</html>
+
+<style>
+	:root {
+		--color-bg: #0f172a;
+		--color-surface: #1e293b;
+		--color-primary: #3b82f6;
+		--color-primary-hover: #2563eb;
+		--color-text: #f1f5f9;
+		--color-text-muted: #cbd5e1;
+		--color-border: #334155;
+		--color-success: #10b981;
+		--max-width: 900px;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+		color: var(--color-text);
+		line-height: 1.6;
+		min-height: 100vh;
+		position: relative;
+		overflow-x: hidden;
+	}
+
+	body::before {
+		content: '';
+		position: fixed;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+		animation: pulse 15s ease-in-out infinite;
+		z-index: 0;
+		pointer-events: none;
+	}
+
+	@keyframes pulse {
+		0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+		50% { transform: scale(1.1) rotate(180deg); opacity: 0.5; }
+	}
+
+	.container {
+		max-width: var(--max-width);
+		margin: 0 auto;
+		padding: 3rem 1.5rem;
+		width: 100%;
+		position: relative;
+		z-index: 1;
+	}
+
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+
+	.breadcrumb a {
+		color: var(--color-text-muted);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.breadcrumb a:hover {
+		color: var(--color-primary);
+	}
+
+	header {
+		text-align: center;
+		margin-bottom: 4rem;
+		animation: fadeInDown 0.8s ease-out;
+	}
+
+	@keyframes fadeInDown {
+		from {
+			opacity: 0;
+			transform: translateY(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	h1 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		background: linear-gradient(135deg, #f1f5f9 0%, #3b82f6 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.subtitle {
+		font-size: 1.25rem;
+		color: var(--color-text-muted);
+		font-weight: 400;
+	}
+
+	.section-group {
+		margin-bottom: 4rem;
+		animation: fadeInUp 0.8s ease-out both;
+	}
+
+	.section-group:nth-child(2) { animation-delay: 0.1s; }
+	.section-group:nth-child(3) { animation-delay: 0.2s; }
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.section-title {
+		font-size: 2rem;
+		margin-bottom: 0.75rem;
+		color: var(--color-text);
+	}
+
+	.section-description {
+		color: var(--color-text-muted);
+		font-size: 1.125rem;
+		margin-bottom: 2rem;
+	}
+
+	.projects {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.project-card {
+		background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.6) 100%);
+		backdrop-filter: blur(10px);
+		border: 1px solid var(--color-border);
+		border-radius: 1rem;
+		padding: 2rem;
+		transition: all 0.3s ease;
+	}
+
+	.project-card:hover {
+		border-color: var(--color-primary);
+		transform: translateY(-4px);
+		box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3);
+	}
+
+	.project-title {
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
+		color: var(--color-text);
+	}
+
+	.project-description {
+		color: var(--color-text-muted);
+		margin-bottom: 1.5rem;
+		font-size: 1.05rem;
+		line-height: 1.6;
+	}
+
+	.project-link {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.75rem 1.5rem;
+		background: linear-gradient(135deg, var(--color-primary) 0%, #2563eb 100%);
+		color: white;
+		text-decoration: none;
+		border-radius: 0.5rem;
+		font-weight: 600;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.project-link::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+		transition: left 0.5s ease;
+	}
+
+	.project-link:hover::before {
+		left: 100%;
+	}
+
+	.project-link:hover {
+		background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+		transform: translateX(8px);
+		box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+	}
+
+	footer {
+		text-align: center;
+		color: var(--color-text-muted);
+		padding-top: 2rem;
+		border-top: 1px solid var(--color-border);
+	}
+
+	@media (max-width: 640px) {
+		h1 {
+			font-size: 2rem;
+		}
+
+		.subtitle {
+			font-size: 1.125rem;
+		}
+
+		.section-title {
+			font-size: 1.75rem;
+		}
+
+		.section-description {
+			font-size: 1rem;
+		}
+
+		.project-card {
+			padding: 1.5rem;
+		}
+
+		.project-title {
+			font-size: 1.25rem;
+		}
+
+		.project-description {
+			font-size: 1rem;
+		}
+	}
+</style>
+
